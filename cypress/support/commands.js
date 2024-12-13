@@ -28,10 +28,10 @@
 /// <reference types="cypress-xpath"/>
 
 Cypress.Commands.add('login', (email, password) => {
-    const loginUrl = Cypress.env('adminUrl') || 'https://admin-demo.nopcommerce.com/login'; // Fallback URL
-    cy.visit(loginUrl);
-    cy.get('input[name=Email]').clear().type(email || Cypress.env('adminEmail'));
-    cy.get('input[name=Password]').clear().type(password || Cypress.env('adminPassword'));
+     
+    cy.visit('https://admin-demo.nopcommerce.com/login');
+    cy.get('input[name=Email]').type(email)
+    cy.get('input[name=Password]').type(password)
     cy.get('input[type=submit]').click();
   });
   
