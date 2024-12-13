@@ -16,5 +16,19 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    supportFile: 'cypress/support/e2e.js', // Ensure this points to the correct file
+    setupNodeEvents(on, config) {
+      // Optional: setup node events here
+    },
+  },
+});
+ 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+/// require('cypress-xpath')
