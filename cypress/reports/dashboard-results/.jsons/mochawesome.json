@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-24T04:54:46.200Z",
+    "end": "2025-01-24T04:55:20.032Z",
+    "duration": 33832,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5ab4c2d6-2c74-49db-a49e-8b96b011fb58",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Dropdown.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56459e7d-e7ac-4f8b-8b08-2fccd126f4ab",
+          "title": "handle dropdowns",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dropdown with select",
+              "fullTitle": "handle dropdowns dropdown with select",
+              "timedOut": null,
+              "duration": 4933,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.zoho.com/commerce/free-demo.html\");\ncy.get(\"#zcf_address_country\").select('Haiti').should('have.value', 'Haiti'); //have.value used to see the value is same",
+              "err": {},
+              "uuid": "1b556505-a53f-4b4a-b0e0-bfdb23bf243a",
+              "parentUUID": "56459e7d-e7ac-4f8b-8b08-2fccd126f4ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dropdwon without select",
+              "fullTitle": "handle dropdowns dropdwon without select",
+              "timedOut": null,
+              "duration": 6618,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.dummyticket.com/dummy-ticket-for-visa-application/\");\ncy.get(\"#select2-billing_country-container\").click();\ncy.get(\".select2-search__field\").type('Italy').type('{enter}'); //like sendkeys(\"value\",.keys.enter)\ncy.get(\"#select2-billing_country-container\").should('have.text', 'Italy'); // have.text used to see the text value is same",
+              "err": {},
+              "uuid": "b5ff5bb8-dc33-4134-abbb-6c32154e88b0",
+              "parentUUID": "56459e7d-e7ac-4f8b-8b08-2fccd126f4ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auto dropdown select",
+              "fullTitle": "handle dropdowns Auto dropdown select",
+              "timedOut": null,
+              "duration": 3226,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.wikipedia.org/\");\ncy.get('#searchInput').type('Delhi');\ncy.get('.suggestion-title').contains('Delhi University').click();",
+              "err": {},
+              "uuid": "b8318105-abd1-492d-9ce7-731643082969",
+              "parentUUID": "56459e7d-e7ac-4f8b-8b08-2fccd126f4ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dropdown with select 1",
+              "fullTitle": "handle dropdowns dropdown with select 1",
+              "timedOut": null,
+              "duration": 2496,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html\");\ncy.get(\"select#dropdowm-menu-1\").select('JAVA').contains('JAVA');",
+              "err": {},
+              "uuid": "70ef5ccf-793f-4ef4-bfe7-a9b49340a843",
+              "parentUUID": "56459e7d-e7ac-4f8b-8b08-2fccd126f4ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b556505-a53f-4b4a-b0e0-bfdb23bf243a",
+            "b5ff5bb8-dc33-4134-abbb-6c32154e88b0",
+            "b8318105-abd1-492d-9ce7-731643082969",
+            "70ef5ccf-793f-4ef4-bfe7-a9b49340a843"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\dashboard-results\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

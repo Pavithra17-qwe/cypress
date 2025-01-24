@@ -1,3 +1,5 @@
+//<reference types="cypress" />
+
 describe('Fixture', () =>{
     let userdata;
     before(function() {

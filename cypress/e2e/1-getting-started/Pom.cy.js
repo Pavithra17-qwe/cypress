@@ -1,19 +1,20 @@
-import LoginPage from "./POM/Loginpage.cy"
+import LoginPage from "./PageObject/LoginPage"
 
-describe('POM TestClass', function(){
-    it('Adactin app', function(){
-        const login = new LoginPage  // object of the class
-        login.visit()
-        login.userName("PreethiSri")
-        login.passWord("pree@0212")
-        login.loginButton()
+describe('test script 1',()=>{
 
-        cy.title().should('be.equal','Adactin.com - Search Hotel')
+it('Login test',()=>{
+
+const test=new LoginPage()
+test.visit()
+test.fillusername('Admin')
+test.fillpwd('admin123')
+test.submit()
+cy.title().should('be.equal','OrangeHRM')
+
+})
 
 
-    })
-    
-    
-    
-    
-   } )
+
+
+
+})

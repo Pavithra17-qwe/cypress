@@ -36,3 +36,5 @@ Cypress.Commands.add('login', (email, password) => {
   });
   
   
+  import 'cypress-downloadfile/lib/downloadFileCommand'; // Use this line for import
+  import '@4tw/cypress-drag-drop';

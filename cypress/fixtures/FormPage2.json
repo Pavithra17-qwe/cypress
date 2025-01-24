@@ -1,0 +1,12 @@
+{
+  "firstName": "John",
+  "lastName": "Oliver",
+  "gender": "Male",
+  "hobbies": ["Reading", "Swimming"],
+  "department": "IT",
+  "username": "johnoliver",
+  "password": "SecurePass123!",
+  "confirmPassword": "SecurePass123!",
+  "email": "john.oliver@abc.com",
+  "contactNo": "(415)8265412"
+}

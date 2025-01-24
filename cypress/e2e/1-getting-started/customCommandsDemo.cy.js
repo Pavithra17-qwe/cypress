@@ -32,7 +32,7 @@ describe('Custom Commands Demo', function(){
 })
 
 
-/*
+
 //Customised login command
 Cypress.Commands.add('logiin', (email, password) => {
       cy.visit('https://practicetestautomation.com/practice-test-login/')
@@ -40,4 +40,4 @@ Cypress.Commands.add('logiin', (email, password) => {
       cy.get('#password').type(password)
       cy.get('#submit').click()
 })
-       */
+       

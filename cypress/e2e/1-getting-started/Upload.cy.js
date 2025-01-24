@@ -1,19 +1,34 @@
+// have to install the cypress file upload plugin using command "npm install --save-dev cypress-file-upload" 
+// Add an import commands.js "import 'cypress-file-upload';""
 
-describe('fileupload', ()=>{
+//Uploading a file in the web (Before uploading any file, add it to the fixtures folder)
 
-    it('File upload test', ()=>{
 
-        cy.visit("https://demo.automationtesting.in/Register.html")
-
-        const myimagefile = "Puppy.jpg"
-        cy.get('#imagesrc').attachFile('Puppy.jpg');
-
+/// <reference types="cypress-downloadfile"/>
+describe('File Upload and Download Test', () => {
+    it('File Upload', () => {
+    
+      cy.visit("https://davidwalsh.name/demo/multiple-file-upload.php")
+      cy.get("#filesToUpload").attachFile(['Pic2.jpg']);
+      
+  
+  
+      // Select file input and upload the file
+      //cy.get('#file').attachFile(filePath);
+      //cy.get('#file-submit').click();
+  
+      // Assert successful upload
+      cy.contains('Files You Selected:').should('be.visible'); // Replace with your app's success message
+      cy.wait(4000);
     })
+  
 
     it('Mutiple file uploads', ()=>{
 
         cy.visit("https://davidwalsh.name/demo/multiple-file-upload.php")
-        cy.get("#filesToUpload").attachFile(['example.json', 'orangehrm.json','Puppy.jpg']);
+        cy.get("#filesToUpload").attachFile(['Pic2.jpg', 'Pic3.jpg','Basics of salesforce.docx']);
     })
+     
 
-})
+    
+});

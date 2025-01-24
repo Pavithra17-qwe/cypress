@@ -17,18 +17,14 @@
 import './commands'
 
 
-const { defineConfig } = require("cypress");
-
-module.exports = defineConfig({
-  e2e: {
-    supportFile: 'cypress/support/e2e.js', // Ensure this points to the correct file
-    setupNodeEvents(on, config) {
-      // Optional: setup node events here
-    },
-  },
-});
  
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 /// require('cypress-xpath')
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false will prevent the error from failing the test
+  return false;
+});
+
+import 'cypress-mochawesome-reporter/register';
