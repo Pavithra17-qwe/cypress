@@ -1,40 +1,26 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
+import 'cypress-downloadfile/lib/downloadFileCommand';
 
 /// <reference types="cypress-xpath"/>
+import 'cypress-file-upload';
+import '@4tw/cypress-drag-drop';
+import 'cypress-xpath'; // Ensure this is imported only once
+import 'cypress-iframe';
 
+
+
+
+// Custom login command for Practice Test Automation
+Cypress.Commands.add('logiin', (email, password) => {
+    cy.visit('https://practicetestautomation.com/practice-test-login/')
+    cy.get('#username').type(email)
+    cy.get('#password').type(password)
+    cy.get('#submit').click()
+});
+
+// Another custom login command for NopCommerce
 Cypress.Commands.add('login', (email, password) => {
-     
     cy.visit('https://admin-demo.nopcommerce.com/login');
     cy.get('input[name=Email]').type(email)
     cy.get('input[name=Password]').type(password)
     cy.get('input[type=submit]').click();
-  });
-  
-  
-  import 'cypress-downloadfile/lib/downloadFileCommand'; // Use this line for import
-  import '@4tw/cypress-drag-drop';
+});

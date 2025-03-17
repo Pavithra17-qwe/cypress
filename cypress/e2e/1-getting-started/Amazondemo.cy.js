@@ -12,11 +12,11 @@ describe('mysuite',()=>{
 
         cy.visit('https://www.amazon.in/')
         cy.get('#nav-link-accountList-nav-line-1').click();
-        cy.get('#ap_email').type("+918056272452")
+        cy.get('#ap_email').type("+917200293258")
         cy.wait(2000)
         cy.get(".a-button-inner > #continue").click();
         cy.wait(2000)
-        cy.get('#ap_password').type("Angalya*2621")
+        cy.get('#ap_password').type("Synergy$7z")
         cy.wait(2000)
         cy.get('#signInSubmit').click();
         //cy.pause();

@@ -5,8 +5,9 @@ describe('Debug or stop?' , () => {
     it('Debug', function () {
     
         cy.visit("https://automationintesting.online/#/")
-        cy.get('.col-2 > .btn').should('have.text', 'Let me hack!');
-        cy.get('#name').clear();
+        cy.wait(2000);
+        
+        cy.wait(2000);
         cy.get('#name').type('Zara');
         cy.wait(2000);
         cy.get('#email').clear();

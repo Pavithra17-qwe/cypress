@@ -1,3 +1,4 @@
+
 // ***********************************************************
 // This example support/e2e.js is processed and
 // loaded automatically before your test files.
@@ -16,15 +17,18 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-
- 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-/// require('cypress-xpath')
+// Handle uncaught exceptions globally
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false will prevent the error from failing the test
   return false;
 });
 
+// Import the Mochawesome reporter
 import 'cypress-mochawesome-reporter/register';
+
+
+
+

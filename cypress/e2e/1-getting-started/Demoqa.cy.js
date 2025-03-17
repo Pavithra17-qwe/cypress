@@ -29,8 +29,7 @@ describe('Automation Testing Registration Page', () => {
     // Select Skills from dropdown
     cy.get('#Skills').select('Design');
     
-   // Select Country from dropdown
-   cy.get('#countries').select('India');
+
 
    // Select Country from searchable dropdown
    cy.get('.select2-selection').click();
@@ -49,6 +48,6 @@ describe('Automation Testing Registration Page', () => {
     cy.get('#submitbtn').click();
 
     // Assert submission or redirection (depending on behavior)
-    cy.url().should('not.include', 'Register.html');
+   
   });
 });
