@@ -1,0 +1,10 @@
+{
+    "firstname": "pavi",
+    "lastname": "shiva",
+    "email": "pavishiva@example.com",
+    "emailInvalid": "pavishiva@invalid",
+    "comments": "This is a test comment.",
+    "username": "zara",
+    "password": "zara123"
+  }
+  

@@ -9,10 +9,10 @@ describe('Registration Test', () => {
       cy.get('h1').should('contain.text', 'Register');  
   
       // Step 3: Fill in the registration form
-      cy.get('input[name="username"]').type('DC0001');  // Enter Employee ID
-      cy.get('input[name="password"]').type('0001');  // Enter password
-      cy.get('input[name="email"]').type('dummy@qaoncloud.com');  // Enter email
-      cy.get('input[name="name"]').type('dummy0001');  // Enter name
+      cy.get('input[name="username"]').type('DC0002');  // Enter Employee ID
+      cy.get('input[name="password"]').type('0002');  // Enter password
+      cy.get('input[name="email"]').type('dummy2@qaoncloud.com');  // Enter email
+      cy.get('input[name="name"]').type('dummy0002');  // Enter name
       
       // Step 4: Select the role from the dropdown
       cy.get('select[name="role"]').select('crewmate');  

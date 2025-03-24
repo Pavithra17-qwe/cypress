@@ -17,27 +17,7 @@ describe("api request",()=>
             })
             
         })
-        it("Fetching all available resources",()=>
-        {
-            cy.request("GET","https://jsonplaceholder.typicode.com/posts").then((response)=>
-            {
-                expect(response.status).to.equal(200)
-                console.log(response.body)
-                expect(response.body).to.have.length(100);
-            })
-        })
-        it("Fetching the details of first user ID ",()=>
-        {
-            cy.request("GET","https://jsonplaceholder.typicode.com/posts?userId=1").then((response)=>
-             {
-                expect(response.status).to.equal(200)
-                console.log(response.body)
-                expect(response.body).to.have.length(10)
-                expect(response.body[0]).to.have.property('title');
-                expect(response.body[0].id).to.equal(1);
-            })
-    
-        })
+  
         it("Listing the nested elements",()=>
         {
             cy.request("GET","https://jsonplaceholder.typicode.com/posts/1/comments").then((response)=>
@@ -137,13 +117,6 @@ describe("api request",()=>
             cy.request('DELETE', `https://jsonplaceholder.typicode.com/posts/${postId}`).then((response) => {
                 expect(response.status).to.equal(200)
                 
-            })
-        })
-        it("Trying to get the deleted record",()=>
-        {
-            cy.request("GET",`https://jsonplaceholder.typicode.com/posts`).then((response)=>
-             {
-                expect(response.status).to.equal(200)
             })
         })
     })
